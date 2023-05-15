@@ -1,4 +1,8 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
+
+# You should set this to run on a schedule somehow. I recommend using MacOS's built-in LaunchDaemons.
+# You can take something like the `healthchecks.plist` file in this repo and put it in `/Library/LaunchDaemons/`
+# (it must run as root).
 
 # Get the path of the latest Time Machine backup
 latest_backup=$(tmutil latestbackup)

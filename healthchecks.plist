@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Disabled</key>
+	<false/>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>HEALTHCHECKS_UUID</key>
+        <!-- Healthchecks.io UUID (required) -->
+		<string>YOUR_UUID_HERE</string>
+	</dict>
+	<key>Label</key>
+	<string>Check Time Machine latest date</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/bin/zsh</string>
+		<!-- Path to the script (required) -->
+		<string>/path/to/healthchecks.sh</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<!-- Logging (optional) -->
+	<key>StandardErrorPath</key>
+	<string>/path/to/stderr.log</string>
+	<key>StandardOutPath</key>
+	<string>/path/to/stdout.log</string>
+	<key>StartCalendarInterval</key>
+	<array>
+		<dict>
+			<!-- Every day at 11:00 -->
+			<key>Hour</key>
+			<integer>11</integer>
+			<key>Minute</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<!-- Every day at 21:00 -->
+			<key>Hour</key>
+			<integer>21</integer>
+			<key>Minute</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<!-- Every hour -->
+	<key>StartInterval</key>
+	<integer>10800</integer>
+</dict>
+</plist>
